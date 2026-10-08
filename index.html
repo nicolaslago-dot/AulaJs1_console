@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
         name="description"
-        content="Central Gamer: primeira aula de JavaScript usando somente console.log()."
+        content="Aula inicial de programação client-side com JavaScript, variáveis, constantes, tipos, operadores e console."
     >
-    <title>Central Gamer | Primeiros passos com JavaScript</title>
+    <title>Central Gamer | Variáveis e tipos com JavaScript</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -15,141 +15,264 @@
         <a class="logo" href="#inicio">Central Gamer</a>
 
         <nav aria-label="Navegação da aula">
-            <a href="#entenda">Entenda</a>
-            <a href="#console">Console</a>
-            <a href="#missoes">Missões</a>
+            <a href="#client-side">Client-side</a>
+            <a href="#variaveis">Variáveis</a>
+            <a href="#tipos">Tipos</a>
+            <a href="#operadores">Operadores</a>
+            <a href="#pratica">Prática</a>
         </nav>
     </header>
 
     <main id="inicio">
         <section class="hero">
-            <div class="hero-texto">
+            <div>
                 <p class="etiqueta">FASE 1</p>
-                <h1>Primeiros passos com JavaScript</h1>
+                <h1>Variáveis, tipos e operações com JavaScript</h1>
                 <p class="resumo">
-                    Hoje o navegador será nosso videogame e o console será a tela onde
-                    veremos cada comando funcionar.
+                    Vamos guardar informações, fazer cálculos e mostrar resultados no
+                    console do navegador.
                 </p>
-                <a class="botao" href="#console">Começar a missão</a>
+                <a class="botao" href="#client-side">Começar a aula</a>
             </div>
 
-            <div class="placar" aria-label="Objetivo da aula">
-                <p class="placar-etiqueta">OBJETIVO</p>
-                <strong>Enviar mensagens para o console</strong>
-                <code>console.log("Olá!");</code>
-            </div>
+            <aside class="placar" aria-label="Conteúdos principais">
+                <p class="placar-etiqueta">CONTEÚDOS</p>
+                <strong>Programação client-side</strong>
+                <code>let</code>
+                <code>const</code>
+                <code>string | number | boolean</code>
+                <code>console.log()</code>
+            </aside>
         </section>
 
-        <section id="entenda" class="secao">
+        <section id="client-side" class="secao">
             <div class="titulo-secao">
-                <p class="etiqueta">MAPA DA FASE</p>
-                <h2>O papel de cada arquivo</h2>
+                <p class="etiqueta">COMEÇO</p>
+                <h2>Programação client-side</h2>
+                <p>
+                    Client-side é o código executado no dispositivo do usuário. Em uma página
+                    web, o navegador carrega o JavaScript e executa suas instruções.
+                </p>
             </div>
 
-            <div class="papeis">
+            <div class="fluxo">
                 <article>
-                    <div class="icone" aria-hidden="true">1</div>
-                    <h3>HTML</h3>
-                    <p>Organiza os textos e as partes da página.</p>
+                    <div class="numero-etapa">1</div>
+                    <h3>HTML carrega</h3>
+                    <p>A tag <code>&#60;script></code> aponta para o arquivo JavaScript.</p>
                 </article>
-
                 <article>
-                    <div class="icone" aria-hidden="true">2</div>
-                    <h3>CSS</h3>
-                    <p>Escolhe cores, tamanhos e posições.</p>
+                    <div class="numero-etapa">2</div>
+                    <h3>Navegador executa</h3>
+                    <p>As instruções são lidas na ordem em que aparecem.</p>
                 </article>
-
                 <article>
-                    <div class="icone" aria-hidden="true">3</div>
-                    <h3>JavaScript</h3>
-                    <p>Executa instruções. Hoje usaremos somente <code>console.log()</code>.</p>
+                    <div class="numero-etapa">3</div>
+                    <h3>Console mostra</h3>
+                    <p>Mensagens, valores, cálculos e erros aparecem no console.</p>
                 </article>
             </div>
 
-            <div class="ligacao">
-                <div>
-                    <h3>Como o HTML encontra o JavaScript?</h3>
-                    <p>
-                        A página carrega o arquivo <code>js/script.js</code> para que o navegador
-                        execute os comandos.
-                    </p>
-                </div>
+            <div class="codigo-destaque">
+                <p>Ligação do JavaScript ao HTML:</p>
+                <code class="bloco-codigo">&#60;script src="js/script.js">&#60;/script></code>
             </div>
         </section>
 
         <section id="console" class="secao secao-escura">
             <div class="titulo-secao">
-                <p class="etiqueta">PAINEL SECRETO</p>
-                <h2>O console do navegador</h2>
+                <p class="etiqueta">ÁREA DE TESTES</p>
+                <h2>Console e console.log()</h2>
                 <p>
-                    O console mostra mensagens, resultados e erros do JavaScript.
-                    Nesta aula, ele será nossa área de testes.
+                    Abra o console com <strong class="tecla">F12</strong> e escolha a aba
+                    <strong>Console</strong>.
+                    O comando <code>console.log()</code> mostra um conteúdo nessa área.
                 </p>
             </div>
 
-            <div class="passos-console">
-                <ol>
-                    <li>Abra esta página no navegador.</li>
-                    <li>Pressione <kbd>F12</kbd> ou <kbd>Fn</kbd> + <kbd>F12</kbd>.</li>
-                    <li>Clique na aba <strong>Console</strong>.</li>
-                    <li>Atualize a página depois de salvar o JavaScript.</li>
-                </ol>
-                <div class="terminal" aria-label="Exemplo de código e resultado no console">
-                    <div class="terminal-topo">
-                    <div class="terminal-topo">
-                        <strong>Console</strong>
-                    </div>
-                    <pre><code>console.log("Jogador conectado!");
-
-Resultado: Jogador conectado!</code></pre>
-                </div>
+            <div class="exemplo-console">
+                <code class="bloco-codigo">console.log("Olá, JavaScript!");&#10;console.log(10);&#10;console.log(5 + 3);</code>
+                <code class="bloco-codigo resultado">> Olá, JavaScript!&#10;> 10&#10;> 8</code>
             </div>
         </section>
 
-        <section id="missoes" class="secao">
+        <section id="variaveis" class="secao">
+            <div class="titulo-secao">
+                <p class="etiqueta">GUARDANDO DADOS</p>
+                <h2>Variáveis e constantes</h2>
+                <p>
+                    Uma variável guarda um valor para usarmos depois. O nome da variável ajuda
+                    a entender o que aquele valor representa.
+                </p>
+            </div>
+
+            <div class="comparacao">
+                <article>
+                    <p class="palavra-chave">let</p>
+                    <h3>Valor que pode mudar</h3>
+                    <code class="bloco-codigo">let pontos = 10;&#10;console.log(pontos);&#10;&#10;pontos = 20;&#10;console.log(pontos);</code>
+                </article>
+
+                <article>
+                    <p class="palavra-chave">const</p>
+                    <h3>Valor que não será trocado</h3>
+                    <code class="bloco-codigo">const nomeDoJogo = "Arena JS";&#10;console.log(nomeDoJogo);</code>
+                </article>
+            </div>
+
+            <div class="regra">
+                <strong>Regra simples:</strong>
+                use <code>const</code> quando o valor não será trocado. Use <code>let</code>
+                quando o programa precisar alterar o valor.
+            </div>
+        </section>
+
+        <section id="tipos" class="secao">
+            <div class="titulo-secao">
+                <p class="etiqueta">TIPOS DE DADOS</p>
+                <h2>String, number e boolean</h2>
+                <p>O tipo indica qual espécie de informação uma variável está guardando.</p>
+            </div>
+
+            <div class="tipos">
+                <article>
+                    <h3>String</h3>
+                    <p>Texto escrito entre aspas.</p>
+                    <code class="bloco-codigo">const nome = "Lia";</code>
+                </article>
+                <article>
+                    <h3>Number</h3>
+                    <p>Número inteiro ou decimal, sem aspas.</p>
+                    <code class="bloco-codigo">const idade = 16;&#10;const preco = 29.90;</code>
+                </article>
+                <article>
+                    <h3>Boolean</h3>
+                    <p>Valor lógico: verdadeiro ou falso.</p>
+                    <code class="bloco-codigo">const estaLogado = true;&#10;const terminou = false;</code>
+                </article>
+            </div>
+
+            <div class="codigo-destaque">
+                <code class="bloco-codigo">console.log(nome);&#10;console.log(idade);&#10;console.log(estaLogado);</code>
+            </div>
+        </section>
+
+        <section id="operadores" class="secao secao-escura">
+            <div class="titulo-secao">
+                <p class="etiqueta">CÁLCULOS</p>
+                <h2>Operadores</h2>
+                <p>Operadores permitem calcular valores e fazer comparações.</p>
+            </div>
+
+            <div class="tabela-responsiva">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Operação</th>
+                            <th>Exemplo</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>+</code></td>
+                            <td>Soma</td>
+                            <td><code>10 + 5</code></td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td><code>-</code></td>
+                            <td>Subtração</td>
+                            <td><code>10 - 5</code></td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><code>*</code></td>
+                            <td>Multiplicação</td>
+                            <td><code>10 * 5</code></td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td><code>/</code></td>
+                            <td>Divisão</td>
+                            <td><code>10 / 5</code></td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td><code>%</code></td>
+                            <td>Resto da divisão</td>
+                            <td><code>10 % 3</code></td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td><code>>=</code></td>
+                            <td>Comparação</td>
+                            <td><code>idade >= 18</code></td>
+                            <td>true ou false</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="programas" class="secao">
+            <div class="titulo-secao">
+                <p class="etiqueta">DEMONSTRAÇÃO</p>
+                <h2>Pequenos programas</h2>
+                <p>Cada programa recebe valores, realiza uma operação e mostra o resultado.</p>
+            </div>
+
+            <div class="programas">
+                <article>
+                    <h3>Nome e idade</h3>
+                    <code class="bloco-codigo">const nome = "Ravi";&#10;let idade = 15;&#10;const idadeNoProximoAno = idade + 1;&#10;&#10;console.log(nome);&#10;console.log(idadeNoProximoAno);</code>
+                </article>
+
+                <article>
+                    <h3>Total da compra</h3>
+                    <code class="bloco-codigo">const preco = 25;&#10;const quantidade = 3;&#10;const total = preco * quantidade;&#10;&#10;console.log(total);</code>
+                </article>
+
+                <article>
+                    <h3>Verificação de idade</h3>
+                    <code class="bloco-codigo">const idade = 19;&#10;const maiorDeIdade = idade >= 18;&#10;&#10;console.log(maiorDeIdade);</code>
+                </article>
+            </div>
+        </section>
+
+        <section id="pratica" class="secao">
             <div class="titulo-secao">
                 <p class="etiqueta">MODO PRÁTICA</p>
-                <h2>Missões no arquivo script.js</h2>
-                <p>
-                    Edite somente <code>js/script.js</code>. Salve, atualize a página e confira
-                    cada resultado no console.
-                </p>
+                <h2>Missões no script.js</h2>
+                <p>Edite o arquivo, salve, atualize a página e confira o console.</p>
             </div>
 
             <div class="missoes">
                 <article>
+                    <p class="tempo">20 min</p>
+                    <h3>Missão 1: perfil</h3>
+                    <p>Crie nome, idade, turma e matrícula ativa. Mostre tudo no console.</p>
+                </article>
+                <article>
+                    <p class="tempo">20 min</p>
+                    <h3>Missão 2: próximo ano</h3>
+                    <p>Calcule qual será a idade do aluno no próximo ano.</p>
+                </article>
+                <article>
                     <p class="tempo">25 min</p>
-                    <h3>Missão 1: seu perfil</h3>
-                    <ol>
-                        <li>Mostre seu nome.</li>
-                        <li>Mostre sua turma.</li>
-                        <li>Mostre um jogo, esporte, música ou série de que você gosta.</li>
-                    </ol>
+                    <h3>Missão 3: compra</h3>
+                    <p>Use preço e quantidade para calcular o total de uma compra.</p>
                 </article>
-
                 <article>
-                    <p class="tempo">30 min</p>
-                    <h3>Missão 2: pontos</h3>
-                    <ol>
-                        <li>Mostre o número <code>100</code> sem aspas.</li>
-                        <li>Mostre o resultado de <code>50 + 25</code>.</li>
-                        <li>Compare <code>"50 + 25"</code> com <code>50 + 25</code>.</li>
-                    </ol>
+                    <p class="tempo">25 min</p>
+                    <h3>Missão 4: calculadora</h3>
+                    <p>Mostre soma, subtração, multiplicação, divisão e resto.</p>
                 </article>
-
-                <article>
-                    <p class="tempo">35 min</p>
-                    <h3>Missão 3: ficha gamer</h3>
-                    <p>Crie cinco linhas: título, nome, turma, algo de que gosta e encerramento.</p>
-                </article>
-
                 <article class="chefao">
                     <p class="tempo">15 min</p>
                     <h3>Chefe final</h3>
-                    <p>
-                        Crie uma tela de vitória com pelo menos cinco
-                        <code>console.log()</code>. Use texto, número e uma conta simples.
-                    </p>
+                    <p>Monte uma ficha com nome, idade, pontos, preço total e um booleano.</p>
                 </article>
             </div>
         </section>
@@ -159,22 +282,20 @@ Resultado: Jogador conectado!</code></pre>
                 <p class="etiqueta">CHECKPOINT</p>
                 <h2>Revisão rápida</h2>
             </div>
-
             <ul>
-                <li>JavaScript é uma linguagem de programação.</li>
-                <li>A página HTML carrega o arquivo JavaScript.</li>
-                <li>O console mostra o resultado das instruções.</li>
-                <li><code>console.log()</code> envia um conteúdo para o console.</li>
-                <li>Texto usa aspas. Uma conta simples fica sem aspas.</li>
+                <li><code>let</code> cria uma variável cujo valor pode mudar.</li>
+                <li><code>const</code> cria uma constante que não será reatribuída.</li>
+                <li>String é texto, number é número e boolean é verdadeiro ou falso.</li>
+                <li>Operadores realizam cálculos e comparações.</li>
+                <li><code>console.log()</code> mostra valores e resultados no console.</li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>Central Gamer | Aula inicial de JavaScript</p>
+        <p>Central Gamer  Programação client-side com JavaScript</p>
     </footer>
 
-    <!-- Esta linha liga o JavaScript ao HTML. -->
     <script src="js/script.js"></script>
 </body>
 </html>
