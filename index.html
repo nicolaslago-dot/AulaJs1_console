@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Central Gamer: primeira aula de JavaScript usando somente console.log()."
+    >
+    <title>Central Gamer | Primeiros passos com JavaScript</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="topo">
+        <a class="logo" href="#inicio">Central Gamer</a>
+
+        <nav aria-label="Navegação da aula">
+            <a href="#entenda">Entenda</a>
+            <a href="#console">Console</a>
+            <a href="#missoes">Missões</a>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <section class="hero">
+            <div class="hero-texto">
+                <p class="etiqueta">FASE 1</p>
+                <h1>Primeiros passos com JavaScript</h1>
+                <p class="resumo">
+                    Hoje o navegador será nosso videogame e o console será a tela onde
+                    veremos cada comando funcionar.
+                </p>
+                <a class="botao" href="#console">Começar a missão</a>
+            </div>
+
+            <div class="placar" aria-label="Objetivo da aula">
+                <p class="placar-etiqueta">OBJETIVO</p>
+                <strong>Enviar mensagens para o console</strong>
+                <code>console.log("Olá!");</code>
+            </div>
+        </section>
+
+        <section id="entenda" class="secao">
+            <div class="titulo-secao">
+                <p class="etiqueta">MAPA DA FASE</p>
+                <h2>O papel de cada arquivo</h2>
+            </div>
+
+            <div class="papeis">
+                <article>
+                    <div class="icone" aria-hidden="true">1</div>
+                    <h3>HTML</h3>
+                    <p>Organiza os textos e as partes da página.</p>
+                </article>
+
+                <article>
+                    <div class="icone" aria-hidden="true">2</div>
+                    <h3>CSS</h3>
+                    <p>Escolhe cores, tamanhos e posições.</p>
+                </article>
+
+                <article>
+                    <div class="icone" aria-hidden="true">3</div>
+                    <h3>JavaScript</h3>
+                    <p>Executa instruções. Hoje usaremos somente <code>console.log()</code>.</p>
+                </article>
+            </div>
+
+            <div class="ligacao">
+                <div>
+                    <h3>Como o HTML encontra o JavaScript?</h3>
+                    <p>
+                        A página carrega o arquivo <code>js/script.js</code> para que o navegador
+                        execute os comandos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="console" class="secao secao-escura">
+            <div class="titulo-secao">
+                <p class="etiqueta">PAINEL SECRETO</p>
+                <h2>O console do navegador</h2>
+                <p>
+                    O console mostra mensagens, resultados e erros do JavaScript.
+                    Nesta aula, ele será nossa área de testes.
+                </p>
+            </div>
+
+            <div class="passos-console">
+                <ol>
+                    <li>Abra esta página no navegador.</li>
+                    <li>Pressione <kbd>F12</kbd> ou <kbd>Fn</kbd> + <kbd>F12</kbd>.</li>
+                    <li>Clique na aba <strong>Console</strong>.</li>
+                    <li>Atualize a página depois de salvar o JavaScript.</li>
+                </ol>
+                <div class="terminal" aria-label="Exemplo de código e resultado no console">
+                    <div class="terminal-topo">
+                    <div class="terminal-topo">
+                        <strong>Console</strong>
+                    </div>
+                    <pre><code>console.log("Jogador conectado!");
+
+Resultado: Jogador conectado!</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="missoes" class="secao">
+            <div class="titulo-secao">
+                <p class="etiqueta">MODO PRÁTICA</p>
+                <h2>Missões no arquivo script.js</h2>
+                <p>
+                    Edite somente <code>js/script.js</code>. Salve, atualize a página e confira
+                    cada resultado no console.
+                </p>
+            </div>
+
+            <div class="missoes">
+                <article>
+                    <p class="tempo">25 min</p>
+                    <h3>Missão 1: seu perfil</h3>
+                    <ol>
+                        <li>Mostre seu nome.</li>
+                        <li>Mostre sua turma.</li>
+                        <li>Mostre um jogo, esporte, música ou série de que você gosta.</li>
+                    </ol>
+                </article>
+
+                <article>
+                    <p class="tempo">30 min</p>
+                    <h3>Missão 2: pontos</h3>
+                    <ol>
+                        <li>Mostre o número <code>100</code> sem aspas.</li>
+                        <li>Mostre o resultado de <code>50 + 25</code>.</li>
+                        <li>Compare <code>"50 + 25"</code> com <code>50 + 25</code>.</li>
+                    </ol>
+                </article>
+
+                <article>
+                    <p class="tempo">35 min</p>
+                    <h3>Missão 3: ficha gamer</h3>
+                    <p>Crie cinco linhas: título, nome, turma, algo de que gosta e encerramento.</p>
+                </article>
+
+                <article class="chefao">
+                    <p class="tempo">15 min</p>
+                    <h3>Chefe final</h3>
+                    <p>
+                        Crie uma tela de vitória com pelo menos cinco
+                        <code>console.log()</code>. Use texto, número e uma conta simples.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao revisao">
+            <div class="titulo-secao">
+                <p class="etiqueta">CHECKPOINT</p>
+                <h2>Revisão rápida</h2>
+            </div>
+
+            <ul>
+                <li>JavaScript é uma linguagem de programação.</li>
+                <li>A página HTML carrega o arquivo JavaScript.</li>
+                <li>O console mostra o resultado das instruções.</li>
+                <li><code>console.log()</code> envia um conteúdo para o console.</li>
+                <li>Texto usa aspas. Uma conta simples fica sem aspas.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Central Gamer | Aula inicial de JavaScript</p>
+    </footer>
+
+    <!-- Esta linha liga o JavaScript ao HTML. -->
+    <script src="js/script.js"></script>
+</body>
+</html>
