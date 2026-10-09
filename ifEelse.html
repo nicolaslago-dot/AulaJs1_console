@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Aprenda condicionais, operadores relacionais e operadores lógicos em JavaScript."
+    >
+    <title>Central Gamer | Condicionais JavaScript</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/aula-condicionais.css">
+</head>
+<body class="aula-condicionais">
+    <header class="topo">
+        <a class="logo" href="#inicio">Central Gamer</a>
+
+        <nav aria-label="Navegação da aula">
+            <a href="#condicionais">Condicionais</a>
+            <a href="#relacionais">Comparações</a>
+            <a href="#logicos">Lógica</a>
+            <a href="#exemplos">Exemplos</a>
+            <a href="#exercicios">Exercícios</a>
+            <a href="index.html">Aula anterior</a>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <section class="hero">
+            <div>
+                <p class="etiqueta">AULA DE JAVASCRIPT</p>
+                <h1>Condicionais: ensinando o código a tomar decisões</h1>
+                <p class="resumo">
+                    Aprenda a usar <code>if</code>, <code>else if</code> e <code>else</code>
+                    para criar regras e escolher o que o programa deve fazer.
+                </p>
+                <a class="botao" href="#condicionais">Começar a aula</a>
+            </div>
+
+            <aside class="placar" aria-label="Roteiro da aula">
+                <p class="placar-etiqueta">ROTEIRO DA AULA</p>
+                <strong>Aprenda em cinco etapas</strong>
+                <ol class="roteiro">
+                    <li><a href="#condicionais"><span>01</span> Entenda as condicionais</a></li>
+                    <li><a href="#relacionais"><span>02</span> Compare valores</a></li>
+                    <li><a href="#logicos"><span>03</span> Combine condições</a></li>
+                    <li><a href="#exemplos"><span>04</span> Veja exemplos</a></li>
+                    <li><a href="#exercicios"><span>05</span> Pratique</a></li>
+                </ol>
+            </aside>
+        </section>
+
+        <section id="condicionais" class="secao">
+            <div class="titulo-secao">
+                <p class="etiqueta">ETAPA 01 · CONDICIONAIS</p>
+                <h2>O que são condicionais?</h2>
+                <p>
+                    Condicionais permitem que o programa tome decisões de acordo com uma
+                    situação. A condição sempre resulta em <code>true</code> (verdadeiro)
+                    ou <code>false</code> (falso).
+                </p>
+            </div>
+
+            <div class="fluxo">
+                <article>
+                    <div class="numero-etapa">1</div>
+                    <h3><code>if</code></h3>
+                    <p>Executa o bloco quando a condição é verdadeira.</p>
+                </article>
+                <article>
+                    <div class="numero-etapa">2</div>
+                    <h3><code>else if</code></h3>
+                    <p>Verifica outra condição se a anterior for falsa.</p>
+                </article>
+                <article>
+                    <div class="numero-etapa">3</div>
+                    <h3><code>else</code></h3>
+                    <p>Executa uma alternativa quando nenhuma condição anterior for verdadeira.</p>
+                </article>
+            </div>
+
+            <h3>Exemplo: vidas do jogador</h3>
+            <p>Vamos verificar quantas vidas o jogador possui e mostrar uma mensagem.</p>
+            <pre class="bloco-codigo"><code>let vidas = 5;
+
+if (vidas >= 10) {
+    console.log("Vida cheia!");
+} else if (vidas > 0) {
+    console.log("Jogador machucado!");
+} else {
+    console.log("Game Over!");
+}</code></pre>
+            <p>Experimente alterar o valor de <code>vidas</code> para 10, 5 e 0.</p>
+        </section>
+
+        <section id="relacionais" class="secao secao-escura">
+            <div class="titulo-secao">
+                <p class="etiqueta">ETAPA 02 · OPERADORES RELACIONAIS</p>
+                <h2>Como comparar valores</h2>
+                <p>
+                    Os operadores relacionais comparam dois valores. O resultado da
+                    comparação é sempre <code>true</code> ou <code>false</code>.
+                </p>
+            </div>
+
+            <div class="tabela-responsiva">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Significado</th>
+                            <th>Exemplo</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&gt;</code></td>
+                            <td>Maior que</td>
+                            <td><code>10 &gt; 5</code></td>
+                            <td><code>true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;</code></td>
+                            <td>Menor que</td>
+                            <td><code>3 &lt; 5</code></td>
+                            <td><code>true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&gt;=</code></td>
+                            <td>Maior ou igual</td>
+                            <td><code>18 &gt;= 18</code></td>
+                            <td><code>true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;=</code></td>
+                            <td>Menor ou igual</td>
+                            <td><code>5 &lt;= 10</code></td>
+                            <td><code>true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>===</code></td>
+                            <td>Igual em valor e tipo</td>
+                            <td><code>5 === 5</code></td>
+                            <td><code>true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>!==</code></td>
+                            <td>Diferente em valor ou tipo</td>
+                            <td><code>5 !== 3</code></td>
+                            <td><code>true</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="regra">
+                <strong>Atenção:</strong> um sinal de igual (<code>=</code>) atribui
+                um valor. Três sinais (<code>===</code>) comparam valor e tipo.
+            </div>
+
+            <h3>Exemplo: comparação de idade</h3>
+            <pre class="bloco-codigo"><code>let idade = 18;
+
+console.log(idade >= 18);
+console.log(idade === 18);
+console.log(idade !== 18);</code></pre>
+        </section>
+
+        <section id="logicos" class="secao">
+            <div class="titulo-secao">
+                <p class="etiqueta">ETAPA 03 · OPERADORES LÓGICOS</p>
+                <h2>Como combinar condições</h2>
+                <p>Operadores lógicos combinam ou invertem condições dentro do programa.</p>
+            </div>
+
+            <div class="tipos">
+                <article>
+                    <h3>E (<code>&amp;&amp;</code>)</h3>
+                    <p>Todas as condições precisam ser verdadeiras.</p>
+                    <p>
+                        <strong>No teclado ABNT2:</strong> pressione
+                        <kbd class="tecla">Shift</kbd> + <kbd class="tecla">7</kbd> duas vezes.
+                    </p>
+                </article>
+                <article>
+                    <h3>OU (<code>||</code>)</h3>
+                    <p>Pelo menos uma das condições precisa ser verdadeira.</p>
+                    <p>
+                        <strong>No teclado ABNT2:</strong> pressione
+                        <kbd class="tecla">Shift</kbd> + a tecla com <kbd class="tecla">|</kbd>
+                        (geralmente ao lado do <kbd class="tecla">Z</kbd>) duas vezes.
+                    </p>
+                </article>
+                <article>
+                    <h3>NÃO (<code>!</code>)</h3>
+                    <p>Inverte o resultado de uma condição.</p>
+                </article>
+            </div>
+
+            <h3>Exemplo 1: operador E</h3>
+            <p>Para entrar no evento, a pessoa precisa ter 18 anos ou mais e possuir ingresso.</p>
+            <pre class="bloco-codigo"><code>let idade = 18;
+let temIngresso = true;
+
+if (idade >= 18 &amp;&amp; temIngresso) {
+    console.log("Entrada permitida!");
+} else {
+    console.log("Entrada negada!");
+}</code></pre>
+
+            <h3>Exemplo 2: operador OU</h3>
+            <p>Uma pessoa pode entrar se for aluno ou professor.</p>
+            <pre class="bloco-codigo"><code>let aluno = true;
+let professor = false;
+
+if (aluno || professor) {
+    console.log("Pode entrar!");
+} else {
+    console.log("Acesso negado!");
+}</code></pre>
+
+            <h3>Exemplo 3: operador NÃO</h3>
+            <p>Vamos verificar se o jogador não está bloqueado.</p>
+            <pre class="bloco-codigo"><code>let bloqueado = false;
+
+if (!bloqueado) {
+    console.log("Jogador liberado!");
+} else {
+    console.log("Jogador bloqueado!");
+}</code></pre>
+        </section>
+
+        <section id="exemplos" class="secao secao-escura">
+            <div class="titulo-secao">
+                <p class="etiqueta">ETAPA 04 · EXEMPLOS PRÁTICOS</p>
+                <h2>Regras simples em código</h2>
+                <p>Veja como as condições podem resolver situações do dia a dia.</p>
+            </div>
+
+            <div class="programas">
+                <article>
+                    <h3>Sistema de notas</h3>
+                    <p>O programa verifica a nota e informa o resultado do estudante.</p>
+                    <pre class="bloco-codigo"><code>let nota = 6;
+
+if (nota >= 7) {
+    console.log("Aprovado!");
+} else if (nota >= 5) {
+    console.log("Recuperação!");
+} else {
+    console.log("Reprovado!");
+}</code></pre>
+                    <p>Experimente as notas 3, 5, 7 e 10.</p>
+                </article>
+
+                <article>
+                    <h3>Moedas do jogador</h3>
+                    <p>O jogador só pode comprar o item quando possui moedas suficientes.</p>
+                    <pre class="bloco-codigo"><code>let moedas = 50;
+let preco = 30;
+
+if (moedas >= preco) {
+    console.log("Compra realizada!");
+} else {
+    console.log("Moedas insuficientes!");
+}</code></pre>
+                    <p>Altere a quantidade de moedas e observe o resultado.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="exercicios" class="secao">
+            <div class="titulo-secao">
+                <p class="etiqueta">ETAPA 05 · EXERCÍCIOS PRÁTICOS</p>
+                <h2>Agora é sua vez</h2>
+                <p>Construa pequenos programas usando condicionais e operadores lógicos.</p>
+            </div>
+
+            <div class="missoes">
+                <article>
+                    <p class="tempo">EXERCÍCIO 1</p>
+                    <h3>Vida do jogador</h3>
+                    <p>Crie uma variável chamada <code>vida</code>.</p>
+                    <ul>
+                        <li>Se a vida for maior que zero, mostre “Jogador vivo”.</li>
+                        <li>Caso contrário, mostre “Game Over”.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <p class="tempo">EXERCÍCIO 2</p>
+                    <h3>Classificação</h3>
+                    <p>Crie uma classificação de pontuação usando <code>if</code>, <code>else if</code> e <code>else</code>.</p>
+                    <ul>
+                        <li>Menos de 50 pontos: Bronze.</li>
+                        <li>De 50 até 99 pontos: Prata.</li>
+                        <li>100 pontos ou mais: Ouro.</li>
+                    </ul>
+                </article>
+
+                <article class="chefao">
+                    <p class="tempo">EXERCÍCIO 3</p>
+                    <h3>Entrada no evento</h3>
+                    <p>
+                        Crie as variáveis <code>idade</code> e <code>temIngresso</code>.
+                        Use o operador E (<code>&amp;&amp;</code>) para liberar a entrada
+                        somente quando a pessoa tiver 18 anos ou mais e possuir ingresso.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao revisao">
+            <div class="titulo-secao">
+                <p class="etiqueta">CHECKPOINT</p>
+                <h2>Revisão da aula</h2>
+            </div>
+
+            <ul>
+                <li><code>if</code> verifica uma condição.</li>
+                <li><code>else if</code> verifica outra possibilidade.</li>
+                <li><code>else</code> executa uma alternativa.</li>
+                <li>Operadores relacionais comparam valores.</li>
+                <li>Operadores lógicos combinam condições.</li>
+            </ul>
+
+            <h3>Como testar os códigos?</h3>
+            <ol>
+                <li>Abra a página no navegador.</li>
+                <li>Pressione F12 e entre na aba Console.</li>
+                <li>Veja os resultados dos exemplos executados por <code>js/script2.js</code>.</li>
+                <li>Altere os valores nesse arquivo e atualize a página para testar novamente.</li>
+            </ol>
+
+            <p>
+                Os exemplos aparecem no Console do navegador; eles não alteram o conteúdo
+                visível da página.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Central Gamer | Aula de JavaScript</p>
+    </footer>
+    <script src="js/script2.js"></script>
+</body>
+</html>

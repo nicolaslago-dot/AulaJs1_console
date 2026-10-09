@@ -1,0 +1,190 @@
+.aula-condicionais .topo {
+    gap: 1.5rem;
+}
+
+.aula-condicionais nav {
+    justify-content: flex-end;
+    gap: 0.4rem;
+}
+
+.aula-condicionais nav a {
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.aula-condicionais nav a:hover,
+.aula-condicionais nav a:focus-visible {
+    background: #eaf2ff;
+}
+
+.aula-condicionais .hero {
+    gap: clamp(2rem, 5vw, 4rem);
+}
+
+.aula-condicionais .placar {
+    gap: 0.85rem;
+}
+
+.aula-condicionais .roteiro {
+    display: grid;
+    gap: 0.45rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.aula-condicionais .roteiro a {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.45rem 0.5rem;
+    border-radius: 0.4rem;
+    color: #e4edff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.aula-condicionais .roteiro a:hover,
+.aula-condicionais .roteiro a:focus-visible {
+    background: #17294d;
+    color: var(--amarelo);
+}
+
+.aula-condicionais .roteiro span {
+    display: grid;
+    width: 1.8rem;
+    height: 1.8rem;
+    place-items: center;
+    border-radius: 50%;
+    background: #17294d;
+    color: var(--azul-claro);
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+
+.aula-condicionais .etiqueta {
+    line-height: 1.4;
+}
+
+.aula-condicionais .titulo-secao {
+    max-width: 58rem;
+}
+
+.aula-condicionais .fluxo article,
+.aula-condicionais .tipos article,
+.aula-condicionais .programas article,
+.aula-condicionais .missoes article {
+    box-shadow: 0 4px 14px rgba(8, 21, 47, 0.06);
+}
+
+.aula-condicionais .fluxo article {
+    border-top: 4px solid var(--azul);
+}
+
+.aula-condicionais .tipos article h3 code {
+    color: var(--azul);
+}
+
+.aula-condicionais .tipos article .bloco-codigo {
+    font-size: 0.9rem;
+}
+
+.aula-condicionais .codigo-destaque {
+    border-radius: 0 0.6rem 0.6rem 0;
+}
+
+.aula-condicionais .regra {
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: var(--texto);
+}
+
+.aula-condicionais table {
+    border: 1px solid #30496f;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.aula-condicionais tbody tr:nth-child(even) {
+    background: #142443;
+}
+
+.aula-condicionais tbody tr:hover {
+    background: #1a3158;
+}
+
+.aula-condicionais td:last-child {
+    font-weight: 800;
+}
+
+.aula-condicionais .programas article h3 {
+    color: var(--azul-escuro);
+}
+
+.aula-condicionais pre.bloco-codigo {
+    max-width: 100%;
+    tab-size: 4;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.aula-condicionais pre.bloco-codigo code {
+    font: inherit;
+}
+
+.aula-condicionais .missoes article {
+    border-left: 4px solid var(--azul);
+}
+
+.aula-condicionais .missoes .tempo {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: #eaf2ff;
+}
+
+.aula-condicionais .missoes .chefao {
+    border: 2px solid var(--coral);
+    border-left-width: 6px;
+}
+
+.aula-condicionais .revisao {
+    padding: 3rem;
+    border: 1px solid var(--borda);
+    border-radius: 0.75rem;
+    background: #eaf2ff;
+}
+
+.aula-condicionais .revisao li {
+    box-shadow: 0 2px 8px rgba(8, 21, 47, 0.04);
+}
+
+@media (max-width: 52rem) {
+    .aula-condicionais nav {
+        justify-content: flex-start;
+    }
+
+    .aula-condicionais .revisao {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    .aula-condicionais nav a {
+        padding: 0.35rem 0.55rem;
+        font-size: 0.85rem;
+    }
+
+    .aula-condicionais .revisao {
+        padding: 1.25rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .aula-condicionais nav a {
+        transition: none;
+    }
+}
